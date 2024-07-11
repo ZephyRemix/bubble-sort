@@ -1,3 +1,8 @@
+def swap(arr, i, j)
+  arr[i], arr[j] = arr[j], arr[i]
+end
+
+
 def bubble_sort(num_arr)
 
   loop do
@@ -10,8 +15,8 @@ def bubble_sort(num_arr)
       next if i == num_arr.length - 1
 
       # if first value bigger than second value, swap values
-      if (num_arr[i] <=> num_arr[i+1]) == 1
-        num_arr[i] = num_arr[i+1]; num_arr[i+1] = val 
+      if num_arr[i] > num_arr[i+1]
+        swap(num_arr, i, i + 1)
         elements_swapped = true
       end 
 
